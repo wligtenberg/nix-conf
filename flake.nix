@@ -28,7 +28,7 @@
     in
     {
       homeConfigurations = {
-        manolo = home-manager.lib.homeManagerConfiguration {
+        willem = home-manager.lib.homeManagerConfiguration {
           inherit pkgs;
           modules = [
             ./home-manager/home.nix

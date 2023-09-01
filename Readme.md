@@ -10,6 +10,7 @@ Repository containing my `dotfiles` configuration, managed via [home manager](<h
     - [Activate the configuration](#activate-the-configuration)
   - [How to's](#how-tos)
     - [Calculate the sha256 has of a Git repository](#calculate-the-sha256-has-of-a-git-repository)
+  - [An specific environment for Python](#an-specific-environment-for-python)
   - [Resources](#resources)
   - [TODOs](#todos)
 
@@ -80,10 +81,10 @@ This configuration uses the [fish shell](<https://fishshell.com/>) as main shell
 mv ~/.bashrc ~/.bashrc.backup
 
 # From the 'nix-conf' folder
-nix run nixpkgs#home-manger -- switch --flake .
+nix run nixpkgs#home-manager -- switch --flake .
 
 # Alternatively
-nix run nixpkgs#home-manger -- switch --flake <path_to>/nix-conf/
+nix run nixpkgs#home-manager -- switch --flake <path_to>/nix-conf/
 ```
 
 ## How to's

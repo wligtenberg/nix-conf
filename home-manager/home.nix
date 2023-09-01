@@ -15,11 +15,11 @@
     };
     git = {
       enable = true;
-      userName = "manolo";
-      userEmail = "mmartinortiz@gmail.com";
+      userName = "Willem Ligtenberg";
+      userEmail = "willem@42analytics.eu";
     };
     direnv = {
-      # Note, enabling the direnv module will always active its functionality for Fish
+      # Note, enabling the direnv module will always activate its functionality for Fish
       # since the direnv package automatically gets loaded in Fish
       enable = true;
       enableBashIntegration = true;
@@ -33,12 +33,11 @@
     # Note that 'micro' does not need to be indicated bellow, under the packages section
     ./apps/fish.nix
     ./apps/micro.nix
-    ./apps/vim.nix
   ];
   home = {
     # Home Manager needs a bit of information about you and the paths it should manage:
-    username = "manolo";
-    homeDirectory = "/home/manolo";
+    username = "willem";
+    homeDirectory = "/home/willem";
     # This value determines the Home Manager release that your configuration is compatible with.
     # This helps avoid breakage when a new Home Manager release introduces backwards incompatible changes.
     #
@@ -58,10 +57,6 @@
       grc # Colour terminal output
       nixpkgs-fmt
       procs # Modern Unix `ps`
-      python311
-      python311Packages.pip
-      python311Packages.pipx
-      python311Packages.virtualenv
       ripgrep # Modern Unix `grep`
       tldr # Modern Unix `man`
       wget2
@@ -69,9 +64,9 @@
     ];
 
     sessionVariables = {
-      EDITOR = "vim";
-      SYSTEMD_EDITOR = "vim";
-      VISUAL = "vim";
+      EDITOR = "micro";
+      SYSTEMD_EDITOR = "micro";
+      VISUAL = "micro";
     };
 
   };
