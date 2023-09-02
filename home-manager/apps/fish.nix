@@ -1,16 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  # fish cannot be set as the default shell of the user because fish shell is not
-  # accessible by chsh. One solution is to sneak the fish shell on bash.
-  # Probably there is already a '.bashrc' file that will make the flake give you and
-  # error/warning. If bash is not going to be used, move it to '.bashrc.backup' and
-  # fish will take over your "default shell"
-  # home.file.".bashrc" = lib.mkIf config.programs.fish.enable {
-  #   text = ''
-  #     exec ${config.programs.fish.package}/bin/fish
-  #   '';
-  # };
   programs.fish = {
     enable = true;
     shellAliases = {
@@ -44,15 +34,15 @@
       { name = "sponge"; src = pkgs.fishPlugins.sponge.src; }
       { name = "bass"; src = pkgs.fishPlugins.bass.src; }
       { name = "pisces"; src = pkgs.fishPlugins.pisces.src; }
-      {
-        name = "fish-autovenv";
-        src = pkgs.fetchFromGitHub {
-          owner = "mmartinortiz";
-          repo = "fish-autovenv";
-          rev = "1.0.0";
-          sha256 = "f6ib/XcgnKGYbhfZca0PMScbHgZP2nMqF5hEbyG0Afo=";
-        };
-      }
+      # {
+      #   name = "fish-autovenv";
+      #   src = pkgs.fetchFromGitHub {
+      #     owner = "mmartinortiz";
+      #     repo = "fish-autovenv";
+      #     rev = "1.0.0";
+      #     sha256 = "f6ib/XcgnKGYbhfZca0PMScbHgZP2nMqF5hEbyG0Afo=";
+      #   };
+      # }
     ];
     functions =
       {
